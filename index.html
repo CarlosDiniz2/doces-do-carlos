@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doces do Carlos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="banner">
+    <div class="overlay">
+        <h1>🍫 Doces do Carlos</h1>
+        <p>FAÇA JÁ SEU PEDIDO!</p>
+    </div>
+</header>
+
+<div id="produtos"></div>
+
+<div class="carrinho">
+<h2>🛒 Carrinho</h2>
+<div id="itens"></div>
+<h3 id="total">Total: R$ 0,00</h3>
+
+<input id="nome" placeholder="Seu nome">
+<select id="pagamento">
+<option>Pix</option>
+<option>Dinheiro</option>
+<option>Cartão</option>
+</select>
+
+<button onclick="finalizarPedido()">Finalizar no WhatsApp</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
