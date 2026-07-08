@@ -45,3 +45,26 @@ button{background:#25D366;color:#fff;border:none;padding:10px;border-radius:6px;
     color: white;
     font-size: 18px;
 }
+
+.item-carrinho{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:8px 0;
+    padding:8px;
+    background:#f5f5f5;
+    border-radius:6px;
+}
+
+.remover{
+    background:#ffffff;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.remover:hover{
+    background:#e26e6e;
+}
