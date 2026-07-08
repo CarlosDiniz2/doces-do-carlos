@@ -3,7 +3,7 @@ const produtos=[
 {
     name:'KitKat Ao Leite',
     preco:5,
-    imagem:'Imagens/kitkat-leite.jpg'
+    imagem:'imagens/kitkat-leite.jpg'
 },
 {
     name:'KitKat Dark',
@@ -42,12 +42,28 @@ function add(i){
  atualizar();
 }
 
-function atualizar(){
- let html='';
- let total=0;
- carrinho.forEach(p=>{html+=`<div>${p.name} - R$ ${p.preco.toFixed(2)}</div>`; total+=p.preco;});
- document.getElementById('itens').innerHTML=html;
- document.getElementById('total').innerText='Total: R$ '+total.toFixed(2);
+function atualizar() {
+    let html = "";
+    let total = 0;
+
+    carrinho.forEach((p, i) => {
+        total += p.preco;
+
+        html += `
+        <div class="item-carrinho">
+            <span>${p.name} - R$ ${p.preco.toFixed(2)}</span>
+            <button class="remover" onclick="remover(${i})">❌</button>
+        </div>
+        `;
+    });
+
+    document.getElementById("itens").innerHTML = html;
+    document.getElementById("total").innerText =
+        "Total: R$ " + total.toFixed(2);
+}
+function remover(indice) {
+    carrinho.splice(indice, 1);
+    atualizar();
 }
 
 function finalizarPedido(){
