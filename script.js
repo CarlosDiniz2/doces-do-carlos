@@ -3,7 +3,7 @@ const produtos=[
 {
     name:'KitKat Ao Leite',
     preco:5,
-    imagem:'imagens/kitkat-leite.jpg'
+    imagem:'Imagens/kitkat-leite.jpg'
 },
 {
     name:'KitKat Dark',
